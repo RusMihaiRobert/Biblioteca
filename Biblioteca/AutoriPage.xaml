@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.AutoriPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnAutoriPageAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView" ItemSelected="OnListViewItemSelected"  Margin="8,8,8,8" HasUnevenRows="True" SeparatorColor="#999966" Header="Autori">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Prenume_autor}" Detail="{Binding Nume_autor}" TextColor="#000033" Height="120"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+  
+        
+</ContentPage>

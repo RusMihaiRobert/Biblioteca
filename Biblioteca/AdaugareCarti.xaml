@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.AdaugareCarti">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+            <Editor x:Name="Nume_carte" Placeholder="Titlul cartii" Text="{Binding Nume_carte}" HeightRequest="50" />
+            <Editor x:Name="Prenume_autor" Placeholder="Prenumele autorului" Text="{Binding Prenume_autor}" HeightRequest="50" />
+            <Editor x:Name="Nume_autor" Placeholder="Numele autorului" Text="{Binding Nume_autor}" HeightRequest="50" />
+            <Editor x:Name="Pagini" Placeholder="Numarul de pagini" Text="{Binding Pagini}" HeightRequest="50" />
+            <Editor x:Name="Categorie" Placeholder="Categoria" Text="{Binding Categorie}" HeightRequest="50" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonCartiClicked" BackgroundColor="#b3b3ff" />
+                <Button Grid.Column="1" Text="Cancel" Clicked="OnCancelButtonCartiClicked" BackgroundColor="#b3b3ff"/>
+            
+        <ListView x:Name="listView" Margin="20" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Nume_carte}"  Detail="{Binding Categorie}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+
+
+</ContentPage>

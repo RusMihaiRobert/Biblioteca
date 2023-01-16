@@ -1,0 +1,47 @@
+﻿using Biblioteca.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Biblioteca
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class BibliotecariPage : ContentPage
+    {
+        public BibliotecariPage()
+        {
+            InitializeComponent();
+        }
+       
+        async void OnBibliotecariPageAddedClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdaugareBibliotecari((Bibliotecari)this.BindingContext)
+            {
+                BindingContext = new Bibliotecari()
+            });
+
+
+        }
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+           
+            listView.ItemsSource = await App.Database.GetListaBibliotecariAsync();
+        }
+        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new ModificareBibliotecari
+                {
+                    BindingContext = e.SelectedItem as Bibliotecari
+                });
+            }
+        }
+    }
+}

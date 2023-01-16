@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.ClientiPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnClientiPageAddedClicked" />
+
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView" Margin="8,8,8,8" HasUnevenRows="True" SeparatorColor="#999966" Header="Clienti"
+              ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate >
+            <DataTemplate>
+
+                <ViewCell>
+                    <Frame x:Name="Frame" CornerRadius="10" HasShadow="False" HeightRequest="80">
+                        <StackLayout>
+                            <Label Text="{Binding Carte}" TextColor="#000033"  Padding="3"  />
+                            <Label Text="{Binding Data_retur}" Padding="3"/>
+
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

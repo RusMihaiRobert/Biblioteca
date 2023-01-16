@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.ModificareAutori">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+
+            
+            <Editor x:Name="Prenume_autor" Text="{Binding Prenume_autor}" HeightRequest="100" />
+            <Editor x:Name="Nume_autor" Text="{Binding Nume_autor}" HeightRequest="100" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonAutoriClicked" BackgroundColor="#b3b3ff"/>
+                <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonAutoriClicked" BackgroundColor="#b3b3ff"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

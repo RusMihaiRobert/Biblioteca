@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.DesprePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bine ati venit!" Margin="20,50,0,20"
+                HorizontalOptions="CenterAndExpand" FontSize="Title" />
+            <Label Margin="8,80,0,8" HorizontalTextAlignment="Center" FontSize="Medium" Text="Biblioteca este o componentă importantă a sistemului naţional de învăţământ, fiind, prin excelență, o instituție a formării intelectuale, prin educație, cunoaștere  și cercetare. Atât prin profilul enciclopedic, cât şi datorită caracterului muzeal şi al valorii de patrimoniu a colecţiilor sale, ea corespunde tuturor exigenţelor nevoilor de informare a comunităţii academice locale și naţionale."/>
+            <Button Text="Recomandare carte" Clicked="Recomandare_Clicked" Margin="8,100,8,0" HeightRequest="60" BackgroundColor="#b3b3ff"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

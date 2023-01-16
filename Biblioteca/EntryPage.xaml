@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.EntryPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Margin="0,0,0,8" >
+            <Button x:Name="Despre" Text="Despre" Clicked="Despre_Clicked" HeightRequest="60" BackgroundColor="#b3b3ff"/>
+            <Button x:Name="Carti" Text="Carti" Clicked="Carti_Clicked" HeightRequest="60" BackgroundColor="#b3b3ff"/>
+            <Button x:Name="Autori" Text="Autori" Clicked="Autori_Clicked"  HeightRequest="60" BackgroundColor="#b3b3ff"/>
+            <Button x:Name="Bibliotecari" Text="Bibliotecari" Clicked="Bibliotecari_Clicked"  HeightRequest="60" BackgroundColor="#b3b3ff"/>
+            <Button x:Name="Clienti" Text="Clienti" Clicked="Clienti_Clicked"  HeightRequest="60" BackgroundColor="#b3b3ff"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

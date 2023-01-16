@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.BibliotecariPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnBibliotecariPageAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView"  ItemSelected="OnListViewItemSelected" Margin="8,8,8,8" HasUnevenRows="True" SeparatorColor="#999966" Header="Bibliotecari" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Nume}" Detail="{Binding Carte}" TextColor="#000033" Height="120"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

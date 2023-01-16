@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biblioteca.AdaugareBibliotecari">
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+            
+            <Editor x:Name="Nume" Placeholder="Numele bibliotecarului" Text="{Binding Nume}" HeightRequest="100" />
+            <Editor x:Name="Prenume" Placeholder="Prenumele bibliotecarului" Text="{Binding Prenume}" HeightRequest="100" />
+            <Editor x:Name="Numar_telefon" Placeholder="Mobil" Text="{Binding Numar_telefon}" HeightRequest="100" />
+            <Editor x:Name="Carte" Placeholder="Titlu Carte" Text="{Binding Carte}" HeightRequest="100" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonBibliotecariClicked" BackgroundColor="#b3b3ff" />
+                <Button Grid.Column="1" Text="Cancel" Clicked="OnCancelButtonBibliotecariClicked" BackgroundColor="#b3b3ff"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
